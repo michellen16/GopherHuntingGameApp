@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Gopher Hunt</string>
+    <string name="permission_label">Game Player Permission</string>
+    <string name="permission_description">Allows the user to play the Gopher Hunt game.</string>
+</resources>

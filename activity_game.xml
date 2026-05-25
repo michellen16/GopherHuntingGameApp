@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tv_game_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game in progress..."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@color/white"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Turn -->
+        <TextView
+            android:id="@+id/tv_turn_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Turn: Player 1"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Player 1 Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 1 - Sweep Strategy"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/player1_color"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tv_player1_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guesses: 0"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp" />
+
+        <!-- Player 1 Grid Container -->
+        <LinearLayout
+            android:id="@+id/grid_container_p1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/grid_border"
+            android:padding="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Player 2 Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 2 - Smart Strategy"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/player2_color"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tv_player2_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guesses: 0"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp" />
+
+        <!-- Player 2 Grid Container -->
+        <LinearLayout
+            android:id="@+id/grid_container_p2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/grid_border"
+            android:padding="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Legend -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@color/white"
+            android:layout_marginBottom="8dp">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empty "
+                android:textSize="10sp"
+                android:drawableStart="@drawable/cell_background"
+                android:drawablePadding="2dp" />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" X=Miss "
+                android:textSize="10sp" />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" C=Close "
+                android:textSize="10sp" />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" N=Near "
+                android:textSize="10sp" />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" !=Found"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_stop_game"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Stop Game"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btn_new_game"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="New Game"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
